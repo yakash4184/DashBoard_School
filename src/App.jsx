@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import backBuilding from './assets/back-building.jpg'
+import bizedifyLogo from './assets/bizedify-logo.png'
 import frontBuilding from './assets/front-building.png'
 import logo from './assets/logo.png'
 import {
@@ -301,6 +302,7 @@ function App() {
 
         <footer className="dashboard-footer">
           <div className="footer-brand">
+            <img src={bizedifyLogo} alt="BizEdify Technologies logo" className="footer-logo" />
             <p className="footer-kicker">Powered By</p>
             <h2>BizEdify</h2>
             <p className="footer-copy">

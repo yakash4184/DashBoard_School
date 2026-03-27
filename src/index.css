@@ -662,6 +662,13 @@ select {
   z-index: 1;
 }
 
+.footer-logo {
+  display: block;
+  width: clamp(110px, 14vw, 150px);
+  height: auto;
+  margin-bottom: 10px;
+}
+
 .footer-kicker {
   margin: 0 0 8px;
   text-transform: uppercase;
