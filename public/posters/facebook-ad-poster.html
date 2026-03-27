@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Savitri Balika Inter College - Admission Open 2026-27</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-deep: #071427;
+      --bg-mid: #0d2e58;
+      --blue: #1677ff;
+      --blue-soft: #58a6ff;
+      --gold: #f4c35a;
+      --gold-strong: #d89b1d;
+      --white: #ffffff;
+      --text-soft: rgba(255,255,255,0.82);
+      --glass: rgba(255,255,255,0.12);
+      --glass-strong: rgba(255,255,255,0.18);
+      --line: rgba(255,255,255,0.18);
+      --shadow: 0 20px 60px rgba(0,0,0,0.32);
+      --shadow-soft: 0 10px 30px rgba(0,0,0,0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #d7dee8;
+      font-family: 'Inter', 'Poppins', sans-serif;
+      color: var(--white);
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 24px;
+    }
+
+    .poster {
+      position: relative;
+      width: 1800px;
+      height: 1200px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(88,166,255,0.22), transparent 34%),
+        radial-gradient(circle at top right, rgba(244,195,90,0.18), transparent 28%),
+        linear-gradient(135deg, #06111f 0%, #0a2340 34%, #0c3d72 100%);
+      border-radius: 34px;
+      box-shadow: 0 24px 80px rgba(4, 12, 24, 0.25);
+      isolation: isolate;
+    }
+
+    .poster::before,
+    .poster::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(12px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .poster::before {
+      width: 360px;
+      height: 360px;
+      left: -110px;
+      top: -120px;
+      background: radial-gradient(circle, rgba(22,119,255,0.35), transparent 68%);
+    }
+
+    .poster::after {
+      width: 340px;
+      height: 340px;
+      right: -80px;
+      bottom: 210px;
+      background: radial-gradient(circle, rgba(244,195,90,0.28), transparent 68%);
+    }
+
+    .top-strip {
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 10px;
+      background: linear-gradient(90deg, var(--gold), #ffe9a8 40%, var(--blue-soft) 100%);
+      z-index: 4;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.06fr 0.94fr;
+      gap: 26px;
+      height: 100%;
+      padding: 42px 42px 30px;
+    }
+
+    .left-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      min-width: 0;
+    }
+
+    .brand-card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      width: fit-content;
+      padding: 16px 22px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.17), rgba(255,255,255,0.08));
+      border: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-radius: 24px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .logo-wrap {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.95), rgba(255,255,255,0.78));
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,0.8), 0 10px 22px rgba(0,0,0,0.15);
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .logo-wrap img {
+      width: 78px;
+      height: 78px;
+      object-fit: contain;
+    }
+
+    .brand-text h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 34px;
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .brand-text p {
+      margin-top: 6px;
+      font-size: 18px;
+      color: rgba(255,255,255,0.82);
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    .hero-card {
+      position: relative;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 0;
+      padding: 36px 34px 30px;
+      background:
+        linear-gradient(160deg, rgba(255,255,255,0.14), rgba(255,255,255,0.07)),
+        linear-gradient(120deg, rgba(8,29,52,0.82), rgba(7,22,38,0.52));
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 34px;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -60px -90px auto;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(244,195,90,0.22), transparent 68%);
+      pointer-events: none;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: #fef0c8;
+      font-size: 17px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+    }
+
+    .kicker::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #ffe9a8, var(--gold));
+      box-shadow: 0 0 18px rgba(244,195,90,0.9);
+    }
+
+    .headline-wrap {
+      margin-top: 22px;
+      max-width: 92%;
+    }
+
+    .headline {
+      font-family: 'Poppins', sans-serif;
+      font-size: 88px;
+      line-height: 0.94;
+      font-weight: 900;
+      letter-spacing: -2.8px;
+      text-transform: uppercase;
+      text-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    }
+
+    .headline .accent {
+      display: block;
+      margin-top: 6px;
+      background: linear-gradient(180deg, #ffffff 0%, #c8e2ff 52%, #81beff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subheadline {
+      margin-top: 22px;
+      font-size: 34px;
+      line-height: 1.3;
+      font-weight: 700;
+      color: #f4f9ff;
+    }
+
+    .subheadline span {
+      color: var(--gold);
+    }
+
+    .lead {
+      margin-top: 16px;
+      max-width: 88%;
+      font-size: 22px;
+      line-height: 1.7;
+      color: var(--text-soft);
+    }
+
+    .hero-bottom {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .pill {
+      padding: 12px 18px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.13);
+      color: #f8fbff;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+    }
+
+    .pill:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.16);
+      border-color: rgba(255,255,255,0.24);
+    }
+
+    .cta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 20px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(244,195,90,0.2), rgba(255,255,255,0.08));
+      border: 1px solid rgba(244,195,90,0.35);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.18);
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff4d0;
+      white-space: nowrap;
+    }
+
+    .cta-badge strong {
+      color: var(--white);
+      font-size: 28px;
+      letter-spacing: 0.3px;
+    }
+
+    .right-panel {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      gap: 24px;
+      min-width: 0;
+    }
+
+    .visual-hero {
+      position: relative;
+      min-height: 0;
+      border-radius: 34px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: #0b203b;
+      isolation: isolate;
+    }
+
+    .visual-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.04);
+    }
+
+    .visual-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(7,16,29,0.12) 0%, rgba(7,16,29,0.28) 44%, rgba(7,16,29,0.7) 100%),
+        linear-gradient(270deg, rgba(5,15,29,0.08), rgba(5,15,29,0.42));
+      z-index: 1;
+    }
+
+    .visual-hero::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 26px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .visual-copy {
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      bottom: 28px;
+      z-index: 3;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+    }
+
+    .visual-copy .tag {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 10px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.15);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #d8eaff;
+      backdrop-filter: blur(10px);
+    }
+
+    .visual-copy h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 40px;
+      line-height: 1.08;
+      font-weight: 800;
+      max-width: 500px;
+      text-shadow: 0 8px 24px rgba(0,0,0,0.34);
+    }
+
+    .admission-chip {
+      padding: 16px 20px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(22,119,255,0.22), rgba(255,255,255,0.08));
+      border: 1px solid rgba(255,255,255,0.16);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      text-align: right;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .admission-chip span {
+      display: block;
+      font-size: 15px;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.72);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .admission-chip strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 32px;
+      line-height: 1.05;
+      font-weight: 900;
+      color: #ffffff;
+    }
+
+    .back-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 18px;
+      align-items: stretch;
+      min-height: 204px;
+      padding: 18px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.14), rgba(255,255,255,0.08));
+      border: 1px solid rgba(255,255,255,0.16);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .back-thumb {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      min-height: 160px;
+    }
+
+    .back-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .back-card:hover .back-thumb img {
+      transform: scale(1.05);
+    }
+
+    .back-thumb::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.35));
+    }
+
+    .back-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .back-copy .eyebrow {
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #ffedb7;
+    }
+
+    .back-copy h3 {
+      margin-top: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 30px;
+      line-height: 1.15;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .back-copy p {
+      margin-top: 10px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .bottom-zone {
+      position: absolute;
+      left: 42px;
+      right: 42px;
+      bottom: 26px;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .facilities-card,
+    .contact-card {
+      position: relative;
+      border-radius: 30px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.14), rgba(255,255,255,0.08));
+      border: 1px solid rgba(255,255,255,0.16);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .facilities-card {
+      padding: 24px 24px 22px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .section-head h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .section-head p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.76);
+      max-width: 360px;
+      text-align: right;
+      line-height: 1.5;
+    }
+
+    .facility-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .facility-item {
+      position: relative;
+      min-height: 132px;
+      padding: 16px 14px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      transition: transform 0.28s ease, background 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    }
+
+    .facility-item:hover {
+      transform: translateY(-6px);
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.2);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.16);
+    }
+
+    .icon-box {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.08));
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+      margin-bottom: 14px;
+    }
+
+    .icon-box svg {
+      width: 28px;
+      height: 28px;
+      stroke: #fff;
+      fill: none;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .facility-item h5 {
+      font-size: 18px;
+      line-height: 1.3;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 0.1px;
+    }
+
+    .contact-card {
+      padding: 24px;
+      background:
+        linear-gradient(135deg, rgba(244,195,90,0.18), rgba(255,255,255,0.09)),
+        linear-gradient(120deg, rgba(4,27,52,0.78), rgba(6,20,39,0.62));
+    }
+
+    .contact-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .contact-top h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 38px;
+      line-height: 1;
+      font-weight: 900;
+      color: #ffffff;
+    }
+
+    .contact-top p {
+      max-width: 250px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.78);
+      text-align: right;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .contact-row {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      align-items: center;
+      gap: 14px;
+      padding: 16px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: transform 0.28s ease, background 0.28s ease, border-color 0.28s ease;
+    }
+
+    .contact-row:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.24);
+    }
+
+    .contact-label {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 42px;
+      padding: 8px 10px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.16), rgba(255,255,255,0.06));
+      color: #ffe9ab;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .contact-value {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.25;
+      word-break: break-word;
+    }
+
+    .contact-value a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .contact-value a:hover {
+      text-decoration: underline;
+      text-decoration-color: rgba(255,255,255,0.7);
+    }
+
+    .contact-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .contact-footer .apply {
+      font-size: 18px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.8);
+      max-width: 330px;
+    }
+
+    .contact-footer .apply strong {
+      color: #fff2c4;
+      font-weight: 800;
+    }
+
+    .school-mark {
+      padding: 14px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.14);
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: #fff;
+      }
+
+      .poster {
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .pill:hover,
+      .facility-item:hover,
+      .contact-row:hover,
+      .back-card:hover .back-thumb img {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="poster">
+    <div class="top-strip"></div>
+
+    <div class="content">
+      <section class="left-panel">
+        <div class="brand-card">
+          <div class="logo-wrap">
+            <img src="logo.png" alt="Savitri Balika Inter College Logo" />
+          </div>
+          <div class="brand-text">
+            <h1>Savitri Balika Inter College</h1>
+            <p>Jamunahia, Mirzapur</p>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div>
+            <div class="kicker">Admissions 2026–27</div>
+
+            <div class="headline-wrap">
+              <div class="headline">
+                Admission Open
+                <span class="accent">2026–27</span>
+              </div>
+              <div class="subheadline">Nursery to <span>12th Class</span></div>
+              <p class="lead">
+                A premium learning environment with strong academics, digital classrooms,
+                disciplined culture, and student-first development for a brighter future.
+              </p>
+            </div>
+          </div>
+
+          <div class="hero-bottom">
+            <div class="highlights">
+              <div class="pill">Modern Campus</div>
+              <div class="pill">Academic Excellence</div>
+              <div class="pill">Holistic Growth</div>
+              <div class="pill">Future Ready Learning</div>
+            </div>
+            <div class="cta-badge">
+              Apply Now
+              <strong>Limited Seats</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="right-panel">
+        <div class="visual-hero">
+          <img src="front.jpg" alt="School Building Front View" />
+          <div class="visual-copy">
+            <div>
+              <div class="tag">Campus Highlight</div>
+              <h2>Inspiring Spaces Designed for Learning, Safety and Growth</h2>
+            </div>
+            <div class="admission-chip">
+              <span>Now Accepting</span>
+              <strong>New Admissions</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="back-card">
+          <div class="back-thumb">
+            <img src="back.jpg" alt="School Building Secondary View" />
+          </div>
+          <div class="back-copy">
+            <div class="eyebrow">Why Choose Us</div>
+            <h3>Professional education atmosphere with values, vision and innovation.</h3>
+            <p>
+              Balanced academics, technology-enabled classrooms and a safe campus experience
+              that supports confident, capable and responsible students.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="bottom-zone">
+      <section class="facilities-card">
+        <div class="section-head">
+          <h4>Our Facilities</h4>
+          <p>Structured learning support, quality infrastructure and student-friendly amenities.</p>
+        </div>
+
+        <div class="facility-grid">
+          <div class="facility-item">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24"><path d="M4 19h16"/><path d="M5 19V9l7-4 7 4v10"/><path d="M9 12h6"/><path d="M9 15h6"/></svg>
+            </div>
+            <h5>Smart Classes</h5>
+          </div>
+
+          <div class="facility-item">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"/><path d="M4 21a8 8 0 0 1 16 0"/><path d="M18 7h3"/><path d="M19.5 5.5v3"/></svg>
+            </div>
+            <h5>Experienced Teachers</h5>
+          </div>
+
+          <div class="facility-item">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="12" rx="2"/><path d="M8 19h8"/><path d="M10 8h4"/><path d="M8 12h8"/></svg>
+            </div>
+            <h5>Computer Lab</h5>
+          </div>
+
+          <div class="facility-item">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24"><path d="M4 6.5C4 5.12 7.58 4 12 4s8 1.12 8 2.5V18c0 1.38-3.58 2.5-8 2.5S4 19.38 4 18Z"/><path d="M4 10c0 1.38 3.58 2.5 8 2.5s8-1.12 8-2.5"/><path d="M4 14c0 1.38 3.58 2.5 8 2.5s8-1.12 8-2.5"/></svg>
+            </div>
+            <h5>Library</h5>
+          </div>
+
+          <div class="facility-item">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M5 19l3-5 4 3 4-3 3 5"/></svg>
+            </div>
+            <h5>Sports Facilities</h5>
+          </div>
+
+          <div class="facility-item">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.2 8.6-7 10-3.8-1.4-7-5-7-10V6l7-3Z"/><path d="m9.5 12 1.6 1.6 3.4-3.7"/></svg>
+            </div>
+            <h5>Safe Environment</h5>
+          </div>
+
+          <div class="facility-item">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24"><path d="M12 4v16"/><path d="M5 12h14"/><path d="M7.5 7.5h9v9h-9z"/></svg>
+            </div>
+            <h5>Digital Learning</h5>
+          </div>
+
+          <div class="facility-item">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24"><path d="M12 2v20"/><path d="M17 6.5c0-1.38-2.24-2.5-5-2.5S7 5.12 7 6.5 9.24 9 12 9s5 1.12 5 2.5S14.76 14 12 14s-5 1.12-5 2.5S9.24 19 12 19s5-1.12 5-2.5"/></svg>
+            </div>
+            <h5>Affordable Fees</h5>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-card">
+        <div class="contact-top">
+          <h4>Contact Us</h4>
+          <p>For admissions, campus visit and enquiry details, connect with us directly.</p>
+        </div>
+
+        <div class="contact-list">
+          <div class="contact-row">
+            <div class="contact-label">Phone</div>
+            <div class="contact-value"><a href="tel:8400585469">8400585469</a></div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-label">Email</div>
+            <div class="contact-value"><a href="mailto:schoolsavitri1@gmail.com">schoolsavitri1@gmail.com</a></div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-label">Website</div>
+            <div class="contact-value"><a href="https://savitribalikaintercollege.netlify.app">savitribalikaintercollege.netlify.app</a></div>
+          </div>
+        </div>
+
+        <div class="contact-footer">
+          <div class="apply">
+            <strong>Admissions Open for 2026–27</strong><br />
+            Enrol your child in a trusted institution committed to quality education.
+          </div>
+          <div class="school-mark">Nursery to 12th Class</div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
