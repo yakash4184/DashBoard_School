@@ -260,8 +260,22 @@ function App() {
             <div className="stack-list">
               {certificateModules.map((item) => (
                 <div key={item.title} className="stack-item">
+                  {item.previewSrc ? (
+                    <a href={item.href} target="_blank" rel="noreferrer" className="certificate-preview-link">
+                      <img
+                        src={item.previewSrc}
+                        alt={item.title}
+                        className="certificate-preview-image"
+                      />
+                    </a>
+                  ) : null}
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>
+                  {item.href ? (
+                    <a href={item.href} target="_blank" rel="noreferrer" className="button-link secondary stack-link">
+                      {item.label || 'Open'}
+                    </a>
+                  ) : null}
                 </div>
               ))}
             </div>

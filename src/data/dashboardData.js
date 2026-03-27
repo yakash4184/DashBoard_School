@@ -67,9 +67,17 @@ export const actionCards = [
     meta: 'Parent outreach',
   },
   {
+    title: 'School Mobile App',
+    description: 'Open the school mobile app listing on Google Play for parent access and downloads.',
+    href: 'https://play.google.com/store/apps/details?id=com.psadi.psad.SBIC',
+    label: 'Open mobile app',
+    accent: 'blue',
+    meta: 'Play Store',
+  },
+  {
     title: 'Facebook Ad Poster',
-    description: 'Open the school admission poster asset for social and ad publishing.',
-    href: '/posters/facebook-ad-poster.html',
+    description: 'Open the updated school admission poster for Facebook and Instagram publishing.',
+    href: '/posters/facebook-ad-poster.jpg',
     label: 'Open poster',
     accent: 'rose',
     meta: 'Campaign creative',
@@ -77,6 +85,13 @@ export const actionCards = [
 ]
 
 export const certificateModules = [
+  {
+    title: 'Best Attendance Certificate',
+    text: 'Open the new attendance certificate design for printing, review, and student issue work.',
+    href: '/certificates/best-attendance-certificate.png',
+    label: 'Open certificate',
+    previewSrc: '/certificates/best-attendance-certificate.png',
+  },
   {
     title: 'Bonafide / Study Certificates',
     text: 'Quick issue flow for day-to-day school verification letters.',

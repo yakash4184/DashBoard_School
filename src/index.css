@@ -580,17 +580,39 @@ select {
   border-radius: 22px;
   background: white;
   border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .stack-item h3 {
-  margin: 0 0 8px;
+  margin: 0;
   font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
 }
 
 .stack-item p {
   margin: 0;
   color: var(--muted);
   line-height: 1.7;
+}
+
+.certificate-preview-link {
+  display: block;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  background: #f7f9fd;
+}
+
+.certificate-preview-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.stack-link {
+  align-self: flex-start;
 }
 
 .design-list {
