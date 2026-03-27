@@ -298,6 +298,32 @@ function App() {
             </div>
           </article>
         </section>
+
+        <footer className="dashboard-footer">
+          <div className="footer-brand">
+            <p className="footer-kicker">Powered By</p>
+            <h2>BizEdify</h2>
+            <p className="footer-copy">
+              Digital-first school growth support for branding, admissions, campaign creatives,
+              and modern education dashboards.
+            </p>
+          </div>
+
+          <div className="footer-details">
+            <div className="footer-card">
+              <span className="footer-label">Founder</span>
+              <strong>Akash Yadav</strong>
+            </div>
+            <div className="footer-card">
+              <span className="footer-label">Contact</span>
+              <a href="tel:8299388507">8299388507</a>
+            </div>
+            <div className="footer-card">
+              <span className="footer-label">Focus</span>
+              <strong>School Web, Branding & Digital Marketing</strong>
+            </div>
+          </div>
+        </footer>
       </main>
     </div>
   )

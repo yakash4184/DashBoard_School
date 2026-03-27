@@ -630,6 +630,95 @@ select {
   color: var(--navy);
 }
 
+.dashboard-footer {
+  margin-top: 22px;
+  padding: 28px;
+  border-radius: 30px;
+  background:
+    linear-gradient(125deg, rgba(14, 35, 78, 0.96) 0%, rgba(23, 73, 164, 0.95) 48%, rgba(8, 130, 123, 0.94) 100%);
+  color: white;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 22px;
+  overflow: hidden;
+  position: relative;
+}
+
+.dashboard-footer::before {
+  content: '';
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  top: -120px;
+  right: -80px;
+}
+
+.footer-brand,
+.footer-details {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-kicker {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.86rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.footer-brand h2 {
+  margin: 0;
+  font-size: clamp(2.3rem, 4vw, 3.7rem);
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  color: #ffe08a;
+}
+
+.footer-copy {
+  margin: 14px 0 0;
+  max-width: 34ch;
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.86);
+  font-weight: 700;
+}
+
+.footer-details {
+  display: grid;
+  gap: 14px;
+}
+
+.footer-card {
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(10px);
+}
+
+.footer-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.84rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.74);
+  font-weight: 900;
+}
+
+.footer-card strong,
+.footer-card a {
+  color: white;
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
 @keyframes title-shine {
   0% {
     background-position: 0% 50%;
@@ -648,6 +737,7 @@ select {
   .hero-panel,
   .books-layout,
   .dual-grid,
+  .dashboard-footer,
   .resource-grid,
   .resource-grid.three-col {
     grid-template-columns: 1fr;
@@ -674,7 +764,8 @@ select {
 
   .hero-panel,
   .section-block,
-  .info-panel {
+  .info-panel,
+  .dashboard-footer {
     border-radius: 24px;
     padding: 18px;
   }
